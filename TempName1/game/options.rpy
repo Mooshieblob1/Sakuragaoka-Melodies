@@ -5,6 +5,13 @@
 ## may want to uncomment them when appropriate.
 
 
+# These control the default values of volume settings
+define config.default_music_volume = 0.5    # Background music
+define config.default_sfx_volume = 0.5      # Sound effects
+define config.default_voice_volume = 0.5    # Voice acting
+
+
+
 ## Basics ######################################################################
 
 ## A human-readable name of the game. This is used to set the default window
@@ -12,7 +19,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("TempName1")
+define config.name = _("Sakuragaoka Melodies")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -62,7 +69,7 @@ define config.has_voice = True
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "audio/intro.wav"
 
 
 ## Transitions #################################################################

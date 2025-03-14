@@ -4,76 +4,104 @@ define principal = Character("Principal Yamada", color="#8b4513")
 define shion = Character("Shion Mizuki", color="#9370db")
 define thoughts = Character(None, italic=True) # For inner monologues - adds italics to differentiate them
 
-# Screen settings for 1080p with 1536x1536 sprites
+# Screen settings for 1080p with 832x1216 sprites
 init:
     # Set the game to 1080p resolution
     $ config.screen_width = 1920
     $ config.screen_height = 1080
     
-    # Define proper scaling for character sprites (1536x1536)
+    # Define proper scaling for character sprites (832x1216)
     $ center_sprite_offset = 0.0    # Default center position
     $ left_sprite_offset = -0.25    # 25% from center toward left
     $ right_sprite_offset = 0.25    # 25% from center toward right
     
-    # Custom transforms for character positioning with appropriate scaling for 1536x1536 sprites
+    # Custom transforms for character positioning with appropriate scaling for 832x1216 sprites
     transform center_sprite:
         xalign 0.5
         yalign 1.0
-        zoom 0.65  # Reduced scaling for 1536x1536 sprites
+        zoom 0.7  # Adjusted scaling for 832x1216 sprites
         
     transform left_sprite:
         xalign 0.25
         yalign 1.0
-        zoom 0.65
+        zoom 0.7
         
     transform right_sprite:
         xalign 0.75
         yalign 1.0
-        zoom 0.65
+        zoom 0.7
 
-# Images and backgrounds (with 1080p resolution)
-image bg school_exterior = im.Scale("bg_school_exterior.jpg", 1920, 1080)
-image bg school_hallway = im.Scale("bg_school_hallway.jpg", 1920, 1080)
-image bg music_room = im.Scale("bg_music_room.jpg", 1920, 1080)
-image bg music_room_door = im.Scale("bg_music_room_door.jpg", 1920, 1080) # View through door window
-image bg art_room = im.Scale("bg_art_room.jpg", 1920, 1080) # Added proper art room background
-image bg art_room_door = im.Scale("bg_art_room_door.jpg", 1920, 1080) # Added proper art room door view
+# Background images (1920x1080 resolution)
+# These are full-screen background images, not character sprites
+image bg school_exterior = im.Scale("backgrounds/bg_school_exterior.jpg", 1920, 1080)
+image bg school_hallway = im.Scale("backgrounds/bg_school_hallway.jpg", 1920, 1080)
+image bg music_room = im.Scale("backgrounds/bg_music_room.jpg", 1920, 1080)
+image bg music_room_door = im.Scale("backgrounds/bg_music_room_door.jpg", 1920, 1080) # View through door window
+image bg art_room = im.Scale("backgrounds/bg_art_room.jpg", 1920, 1080)
+image bg art_room_door = im.Scale("backgrounds/bg_art_room_door.jpg", 1920, 1080)
 
-# Character sprites (1536x1536 resolution)
-image principal_smile = "principal_smile.png"
-image principal_neutral = "principal_neutral.png"
-image principal_curious = "principal_curious.png"
+# Activity background images (showing piano/painting activities)
+image bg shion_piano = im.Scale("backgrounds/shion_piano.jpg", 1920, 1080)      # Shion at piano (background)
+image bg shion_piano_side = im.Scale("backgrounds/shion_piano_side.jpg", 1920, 1080) # Side view of piano playing
+image bg shion_painting = im.Scale("backgrounds/shion_painting.jpg", 1920, 1080) # Shion painting (background)
 
-image shion_play_piano = "shion_play_piano.png"
-image shion_play_piano_side = "shion_play_piano_side.png" # Side view of Shion playing
-image shion_painting = "shion_painting.png" # Added proper art pose
-image shion_surprised = "shion_surprised.png"
-image shion_curious = "shion_curious.png"
+# Character sprites (832x1216 resolution)
+# Principal character sprites
+image principal_smile = "sprites/principal/principal_smile.png"       # 832x1216 sprite
+image principal_neutral = "sprites/principal/principal_neutral.png"   # 832x1216 sprite
+image principal_curious = "sprites/principal/principal_curious.png"   # 832x1216 sprite
 
-# MC character sprites (1536x1536 resolution)
-image mc_angry = "mc_angry.png"
-image mc_confused = "mc_confused.png"
-image mc_curious = "mc_curious.png"
-image mc_disgusted = "mc_disgusted.png"
-image mc_embarrassed = "mc_embarrassed.png"
-image mc_excited = "mc_excited.png"
-image mc_happy = "mc_happy.png"
-image mc_hurt = "mc_hurt.png"
-image mc_laughing = "mc_laughing.png"
-image mc_nervous = "mc_nervous.png"
-image mc_neutral = "mc_neutral.png"
-image mc_sad = "mc_sad.png"
-image mc_scared = "mc_scared.png"
-image mc_shy = "mc_shy.png"
-image mc_smug = "mc_smug.png"
-image mc_surprised = "mc_surprised.png"
-image mc_thinking = "mc_thinking.png"
-image mc_tired = "mc_tired.png"
-image mc_worried = "mc_worried.png"
+# Shion character sprites (832x1216 resolution)
+
+# Emotions - complete set of Shion's expressions
+image shion_angry = "sprites/shion/shion_angry.png"                   # 832x1216 sprite
+image shion_aroused = "sprites/shion/shion_aroused.png"               # 832x1216 sprite
+image shion_confused = "sprites/shion/shion_confused.png"             # 832x1216 sprite
+image shion_determined = "sprites/shion/shion_determined.png"         # 832x1216 sprite
+image shion_disgusted = "sprites/shion/shion_disgusted.png"           # 832x1216 sprite
+image shion_embarrassed = "sprites/shion/shion_embarrassed.png"       # 832x1216 sprite
+image shion_excited = "sprites/shion/shion_excited.png"               # 832x1216 sprite
+image shion_happy = "sprites/shion/shion_happy.png"                   # 832x1216 sprite
+image shion_hurt = "sprites/shion/shion_hurt.png"                     # 832x1216 sprite
+image shion_irritated = "sprites/shion/shion_irritated.png"           # 832x1216 sprite
+image shion_laughing = "sprites/shion/shion_laughing.png"             # 832x1216 sprite
+image shion_love = "sprites/shion/shion_love.png"                     # 832x1216 sprite
+image shion_nervous = "sprites/shion/shion_nervous.png"               # 832x1216 sprite
+image shion_neutral = "sprites/shion/shion_neutral.png"               # 832x1216 sprite
+image shion_playful = "sprites/shion/shion_playful.png"               # 832x1216 sprite
+image shion_sad = "sprites/shion/shion_sad.png"                       # 832x1216 sprite
+image shion_scared = "sprites/shion/shion_scared.png"                 # 832x1216 sprite
+image shion_shy = "sprites/shion/shion_shy.png"                       # 832x1216 sprite
+image shion_smug = "sprites/shion/shion_smug.png"                     # 832x1216 sprite
+image shion_surprised = "sprites/shion/shion_surprised.png"           # 832x1216 sprite
+image shion_thinking = "sprites/shion/shion_thinking.png"             # 832x1216 sprite
+image shion_tired = "sprites/shion/shion_tired.png"                   # 832x1216 sprite
+image shion_worried = "sprites/shion/shion_worried.png"               # 832x1216 sprite
+
+# MC character sprites (832x1216 resolution)
+image mc_angry = "sprites/mc/mc_angry.png"                # 832x1216 sprite
+image mc_confused = "sprites/mc/mc_confused.png"          # 832x1216 sprite
+image mc_curious = "sprites/mc/mc_curious.png"            # 832x1216 sprite
+image mc_disgusted = "sprites/mc/mc_disgusted.png"        # 832x1216 sprite
+image mc_embarrassed = "sprites/mc/mc_embarrassed.png"    # 832x1216 sprite
+image mc_excited = "sprites/mc/mc_excited.png"            # 832x1216 sprite
+image mc_happy = "sprites/mc/mc_happy.png"                # 832x1216 sprite
+image mc_hurt = "sprites/mc/mc_hurt.png"                  # 832x1216 sprite
+image mc_laughing = "sprites/mc/mc_laughing.png"          # 832x1216 sprite
+image mc_nervous = "sprites/mc/mc_nervous.png"            # 832x1216 sprite
+image mc_neutral = "sprites/mc/mc_neutral.png"            # 832x1216 sprite
+image mc_sad = "sprites/mc/mc_sad.png"                    # 832x1216 sprite
+image mc_scared = "sprites/mc/mc_scared.png"              # 832x1216 sprite
+image mc_shy = "sprites/mc/mc_shy.png"                    # 832x1216 sprite
+image mc_smug = "sprites/mc/mc_smug.png"                  # 832x1216 sprite
+image mc_surprised = "sprites/mc/mc_surprised.png"        # 832x1216 sprite
+image mc_thinking = "sprites/mc/mc_thinking.png"          # 832x1216 sprite
+image mc_tired = "sprites/mc/mc_tired.png"                # 832x1216 sprite
+image mc_worried = "sprites/mc/mc_worried.png"            # 832x1216 sprite
 
 # Sound effects and music
 define audio.piano_melody = "audio/piano_melody.mp3"
-define audio.distant_piano = "audio/distant_piano.mp3" # Added to match the audio usage
+define audio.distant_piano = "audio/distant_piano.mp3"
 define audio.footsteps = "audio/footsteps.mp3"
 define audio.school_ambience = "audio/school_ambience.mp3"
 
