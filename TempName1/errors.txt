@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 237: end of line expected.
+    scene bg music_room with dissolve if piano_or_art == "piano" else scene bg art_room with dissolve
+                                      ^
+
+Ren'Py Version: Ren'Py 8.3.6.25022803
+Fri Mar 14 13:13:37 2025
