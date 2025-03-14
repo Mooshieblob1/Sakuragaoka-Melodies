@@ -44,7 +44,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "TempName1"
+define build.name = "sakuragaoka-melodies"
 
 
 ## Sounds and music ############################################################
@@ -150,7 +150,7 @@ default preferences.afm_time = 15
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "TempName1-1741919716"
+define config.save_directory = "sakura-1741919716"
 
 
 ## Icon ########################################################################
