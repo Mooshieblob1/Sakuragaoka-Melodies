@@ -45,3 +45,5 @@ screenshots/
 # OS-specific
 .DS_Store
 Thumbs.db
+TempName1/log.txt
+TempName1/game/cache/shaders.txt
