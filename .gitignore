@@ -1,1 +1,47 @@
+# Ren'Py Engine
 renpyEngine/
+
+# Temporary files
+log.txt
+persistent
+TempName*
+*.rpyc
+*.rpyb
+*.rpymc
+*.bak
+*.tmp
+*~
+traceback.txt
+errors.txt
+lint.txt
+
+# Cache
+__pycache__/
+cache/
+*.pyc
+
+# Saves and temporary game data
+game/saves/
+saves/
+tmp/
+
+# Build files
+*.app/
+*.dmg
+*.exe
+*.zip
+*.tar.gz
+build/
+dist/
+
+# Log files
+log/
+logs/
+*.log
+
+# Screenshot directory
+screenshots/
+
+# OS-specific
+.DS_Store
+Thumbs.db
